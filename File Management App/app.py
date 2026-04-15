@@ -1,6 +1,7 @@
 import os
 import time
 
+
 def create_file(filename):
     try:
         with open(filename, 'x'):
@@ -10,14 +11,16 @@ def create_file(filename):
     except Exception as E:
         print('An error occurred!')
 
+
 def view_all_files():
-    files= os.listdir()
+    files = os.listdir()
     if not files:
         print('No file found.')
     else:
         print('Files in directory.')
         for file in files:
             print(file)
+
 
 def delete_file(filename):
     try:
@@ -27,7 +30,8 @@ def delete_file(filename):
         print('File not found.')
     except Exception as e:
         print('An error has occured during deletion of {filename}')
-    
+
+
 def read_file(filename):
     try:
         with open(filename, 'r') as f:
@@ -37,6 +41,7 @@ def read_file(filename):
         print(f'{filename} does not exist.')
     except Exception as e:
         print('An error has occured.')
+
 
 def edit_file(filename):
     try:
@@ -48,6 +53,7 @@ def edit_file(filename):
         print(f'{filename} does not exist.')
     except Exception as e:
         print('An error has occured.')
+
 
 def main():
     while True:
